@@ -9,11 +9,13 @@ function Usuarios() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    axios.get('http://localhost:3001/usuarios')
-      .then(response => setUsuarios(response.data))
-      .catch(console.error)
-      .finally(() => setLoading(false))
-  }, [])
+    axios.get('http://localhost:3001/usuarios', {
+      headers: { 'Cache-Control': 'no-cache' }
+    })
+    .then(response => setUsuarios(response.data))
+    .catch(console.error)
+    .finally(() => setLoading(false));
+  }, []);
 
   const handleClick = (id) => {
     navigate(`/dados/${id}`)

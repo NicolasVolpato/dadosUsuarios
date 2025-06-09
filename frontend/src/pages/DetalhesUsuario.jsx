@@ -25,6 +25,8 @@ function DetalhesUsuario() {
           <Typography variant="h5">{usuario.nome}</Typography>
           <Typography>Email: {usuario.email}</Typography>
           <Typography>Idade: {usuario.idade}</Typography>
+          <Typography>Telefone: {usuario.telefone}</Typography>
+          <Typography>Data de Cadastro: {usuario.dataCadastro}</Typography>
         </CardContent>
       </Card>
     </Container>
